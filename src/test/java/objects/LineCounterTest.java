@@ -9,7 +9,7 @@ class LineCounterTest {
 
     @Test
     void lineCounterShouldProperlyCountValues(){
-        String exampleLine = "3x1+7x2-x3+4x5-7x17->min";
+        String exampleLine = "3x1+7x2-x3+4x5-x17->min";
         LineCounter lineCounter = new LineCounter(exampleLine);
         assertThat(lineCounter.countValues()).isEqualTo(17);
     }

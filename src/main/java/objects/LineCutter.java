@@ -17,10 +17,12 @@ public class LineCutter {
     //too long and too complicated method but working properly :)
     public List<Integer> cut() {
         StringBuilder value = new StringBuilder();
+
         for (int i = 0; i < line.length(); i++) {
             char x = line.charAt(i);
             char y = line.charAt(i + 1);
             char z = line.charAt(i + 2);
+
             if (x == '<' || x == '>' || x == '=' || (x == '-' && y == '>')) {
                 break;
             } else if (Character.isDigit(x) || x == '-') {
@@ -37,6 +39,7 @@ public class LineCutter {
                     if (value.isEmpty() || value.toString().equals("-")){
                         value.append("1");
                     }
+
                     values.set(Integer.parseInt(helper.toString()) - 1,
                             Integer.parseInt(value.toString()));
                 }
