@@ -14,4 +14,9 @@ public class Goal extends Line {
         this.destination = rightSideExtractor.getDestination();
     }
 
+    public boolean equals(Goal obj) {
+        return this.getLineValues().equals(obj.getLineValues())
+                && this.getDestination().equals(obj.getDestination());
+    }
+
 }

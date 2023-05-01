@@ -21,4 +21,10 @@ public class Condition extends Line {
         this.sign = rightSideExtractor.getSign();
         this.rightValue = rightSideExtractor.getRightValue();
     }
+
+    public boolean equals(Condition obj) {
+        return this.getLineValues().equals(obj.getLineValues())
+                && this.getSign().equals(obj.getSign())
+                && this.getRightValue() == obj.getRightValue();
+    }
 }

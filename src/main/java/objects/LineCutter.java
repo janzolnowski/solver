@@ -21,7 +21,12 @@ public class LineCutter {
         for (int i = 0; i < line.length(); i++) {
             char x = line.charAt(i);
             char y = line.charAt(i + 1);
-            char z = line.charAt(i + 2);
+            char z;
+            try {
+                z = line.charAt(i + 2);
+            } catch (IndexOutOfBoundsException e){
+                z = '!';
+            }
 
             if (x == '<' || x == '>' || x == '=' || (x == '-' && y == '>')) {
                 break;

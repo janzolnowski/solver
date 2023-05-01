@@ -10,10 +10,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String line = "x1+4x2-4x5+x7<=6";
-        LineCounter lineCounter = new LineCounter(line);
-        LineCutter lineCutter = new LineCutter(line, lineCounter.countValues());
-        System.out.println(lineCutter.cut());
+        InputGetter input = new InputGetter("/home/janzolnowski/IdeaProjects/solver/src/main/resources/example");
+        System.out.println(input.getFileLines());
 
     }
 }
