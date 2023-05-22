@@ -3,7 +3,7 @@ package changer;
 import lombok.Getter;
 import objects.Line;
 
-public class LineChanger implements ILineChanger{
+public class LineChanger{
     @Getter
     private final Line line;
     private final ILineChanger changer;
@@ -13,8 +13,7 @@ public class LineChanger implements ILineChanger{
         this.changer = changer;
     }
 
-    @Override
-    public Line change() {
+    public Line processChange(){
         return changer.change();
     }
 }

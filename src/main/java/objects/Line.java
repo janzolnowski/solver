@@ -22,4 +22,16 @@ public abstract class Line {
         lineValues = doubleParser.parse();
     }
 
+    public void setValue(int index, double value){
+        lineValues.set(index, value);
+    }
+
+    public void addValue(double value){
+        lineValues.add(value);
+    }
+
+    public void addValue(int index, double value){
+        lineValues.add(index, value);
+    }
+
 }
